@@ -1,0 +1,82 @@
+[gd_scene load_steps=10 format=3 uid="uid://dqncchs5hk006"]
+
+[ext_resource type="Script" uid="uid://dsjugnsiyeabi" path="res://mainMenu.gd" id="1_83s16"]
+[ext_resource type="Texture2D" uid="uid://70khruaajksd" path="res://images/main_menu.png" id="2_w7d22"]
+[ext_resource type="Texture2D" uid="uid://be6i1i6kqlfbt" path="res://images/stackOfPaper.png" id="3_0ei6b"]
+[ext_resource type="FontFile" uid="uid://b7vv6gahjxjce" path="res://assets/fonts/04b-30.ttf" id="3_fy5us"]
+[ext_resource type="Texture2D" uid="uid://15i4h0ulkxij" path="res://images/SORTIE.png" id="4_hvu0j"]
+[ext_resource type="FontFile" uid="uid://cmhlxw2ybg0ve" path="res://assets/fonts/VCR_OSD_MONO_1.001.ttf" id="4_o0ref"]
+[ext_resource type="Texture2D" uid="uid://d0lmc0j8wkugm" path="res://images/stackOfPaperhover.png" id="4_rdsan"]
+[ext_resource type="Texture2D" uid="uid://cgsadr841qmbq" path="res://images/sortie sign pixel copy.png" id="5_hvu0j"]
+[ext_resource type="Texture2D" uid="uid://1q1lvvj0xawg" path="res://images/store.png" id="6_c3jr6"]
+
+[node name="mainMenu" type="Node2D"]
+script = ExtResource("1_83s16")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(960.056, 540.156)
+scale = Vector2(11.9993, 11.9965)
+texture = ExtResource("2_w7d22")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 115.0
+offset_top = 895.0
+offset_right = 1804.0
+offset_bottom = 1103.0
+theme_override_colors/font_color = Color(0.719228, 0.0955382, 0.256972, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.462745)
+theme_override_colors/font_outline_color = Color(0.512253, 0.0492422, 0.174064, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 30
+theme_override_constants/shadow_outline_size = 20
+theme_override_fonts/font = ExtResource("3_fy5us")
+theme_override_font_sizes/font_size = 152
+text = "JEUX DE MOTS"
+
+[node name="Cash" type="Label" parent="."]
+offset_left = 88.0
+offset_top = 127.0
+offset_right = 457.0
+offset_bottom = 223.0
+theme_override_colors/font_color = Color(1, 0.505366, 0.622974, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.568627)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("4_o0ref")
+theme_override_font_sizes/font_size = 70
+text = "ARGENT:$0"
+
+[node name="startButton" type="TextureButton" parent="."]
+offset_left = 668.0
+offset_top = 578.0
+offset_right = 881.0
+offset_bottom = 738.0
+texture_normal = ExtResource("3_0ei6b")
+texture_hover = ExtResource("4_rdsan")
+stretch_mode = 0
+
+[node name="exitButton" type="TextureButton" parent="."]
+offset_left = 1560.0
+offset_top = 179.0
+offset_right = 1883.0
+offset_bottom = 314.0
+texture_normal = ExtResource("4_hvu0j")
+texture_hover = ExtResource("5_hvu0j")
+stretch_mode = 5
+
+[node name="storeButton" type="TextureButton" parent="."]
+offset_left = 86.0
+offset_top = -4.0
+offset_right = 344.0
+offset_bottom = 111.0
+texture_normal = ExtResource("6_c3jr6")
+stretch_mode = 0
+
+[node name="backgroundMusic" type="AudioStreamPlayer2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="pressed" from="exitButton" to="." method="_on_exit_button_pressed"]

@@ -1,0 +1,119 @@
+[gd_scene load_steps=6 format=3 uid="uid://dyx351tg048b4"]
+
+[ext_resource type="Script" uid="uid://4e56cbhenm4u" path="res://game.gd" id="1_80nbo"]
+[ext_resource type="Texture2D" uid="uid://bq2jyf3u1n3kb" path="res://pages/page_mockup.png" id="2_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://cdh7h1lq83dp2" path="res://images/exit.png" id="2_fc0e3"]
+[ext_resource type="Texture2D" uid="uid://cym4diu8drcmy" path="res://pages/page2_mockup.png" id="3_feb5d"]
+[ext_resource type="Texture2D" uid="uid://bfp4mi5j66yqj" path="res://images/highlighter.png" id="5_7jktm"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_80nbo")
+
+[node name="gameExit" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("2_fc0e3")
+
+[node name="reward" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 23.0
+offset_right = 215.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(0.905882, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+
+[node name="rewardTimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="page1" type="Sprite2D" parent="."]
+position = Vector2(960, 549)
+scale = Vector2(1.08656, 1.08656)
+texture = ExtResource("2_e2o6t")
+
+[node name="page2" type="Sprite2D" parent="."]
+position = Vector2(955, 536)
+scale = Vector2(1.1553, 1.1553)
+texture = ExtResource("3_feb5d")
+
+[node name="page3" type="Sprite2D" parent="."]
+position = Vector2(960, 549)
+scale = Vector2(1.08656, 1.08656)
+texture = ExtResource("2_e2o6t")
+
+[node name="page4" type="Sprite2D" parent="."]
+position = Vector2(960, 549)
+scale = Vector2(1.08656, 1.08656)
+texture = ExtResource("2_e2o6t")
+
+[node name="page5" type="Sprite2D" parent="."]
+position = Vector2(960, 549)
+scale = Vector2(1.08656, 1.08656)
+texture = ExtResource("2_e2o6t")
+
+[node name="page6" type="Sprite2D" parent="."]
+position = Vector2(960, 549)
+scale = Vector2(1.08656, 1.08656)
+texture = ExtResource("2_e2o6t")
+
+[node name="page7" type="Sprite2D" parent="."]
+position = Vector2(960, 549)
+scale = Vector2(1.08656, 1.08656)
+texture = ExtResource("2_e2o6t")
+
+[node name="page8" type="Sprite2D" parent="."]
+position = Vector2(960, 549)
+scale = Vector2(1.08656, 1.08656)
+texture = ExtResource("2_e2o6t")
+
+[node name="page9" type="Sprite2D" parent="."]
+position = Vector2(960, 549)
+scale = Vector2(1.08656, 1.08656)
+texture = ExtResource("2_e2o6t")
+
+[node name="page10" type="Sprite2D" parent="."]
+position = Vector2(960, 549)
+scale = Vector2(1.08656, 1.08656)
+texture = ExtResource("2_e2o6t")
+
+[node name="page11" type="Sprite2D" parent="."]
+position = Vector2(960, 549)
+scale = Vector2(1.08656, 1.08656)
+texture = ExtResource("2_e2o6t")
+
+[node name="page12" type="Sprite2D" parent="."]
+position = Vector2(960, 549)
+scale = Vector2(1.08656, 1.08656)
+texture = ExtResource("2_e2o6t")
+
+[node name="page13" type="Sprite2D" parent="."]
+position = Vector2(960, 549)
+scale = Vector2(1.08656, 1.08656)
+texture = ExtResource("2_e2o6t")
+
+[node name="page14" type="Sprite2D" parent="."]
+position = Vector2(960, 549)
+scale = Vector2(1.08656, 1.08656)
+texture = ExtResource("2_e2o6t")
+
+[node name="page15" type="Sprite2D" parent="."]
+position = Vector2(960, 549)
+scale = Vector2(1.08656, 1.08656)
+texture = ExtResource("2_e2o6t")
+
+[node name="answerBox" type="LineEdit" parent="."]
+offset_left = 59.0
+offset_top = 916.0
+offset_right = 1847.0
+offset_bottom = 1026.0
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 70
+placeholder_text = "What concept am I using here?"
+
+[node name="Highlighter" type="Sprite2D" parent="."]
+position = Vector2(1034.84, 694.806)
+rotation = -0.959931
+scale = Vector2(6.09855, 6.09855)
+texture = ExtResource("5_7jktm")
+
+[connection signal="timeout" from="rewardTimer" to="." method="_on_reward_timeout"]
+[connection signal="text_submitted" from="answerBox" to="." method="_on_text_submitted"]
