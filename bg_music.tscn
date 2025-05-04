@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr31ahrhyjb7e"]
+
+[ext_resource type="AudioStream" uid="uid://crcwii0klk3kd" path="res://assets/audio/bg music gamejam.wav" id="1_p1osb"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_p1osb")
+volume_db = -9.41
+autoplay = true

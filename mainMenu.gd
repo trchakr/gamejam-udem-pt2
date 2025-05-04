@@ -1,7 +1,7 @@
 extends Node2D
 
 func _process(delta):
-	$Cash.text = "Cash: $" + str(Global.cash)
+	$Cash.text =  str(Global.cash)+ "$"
 
 func _ready():
 	Input.set_custom_mouse_cursor(null)
@@ -22,3 +22,20 @@ func _openStore():
 
 func _on_exit_button_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_store_button_pressed() -> void:
+	$"select sound".play()
+
+func _on_store_button_mouse_entered() -> void:
+	$"hover sound".play()
+
+func _on_start_button_pressed() -> void:
+	$"select sound".play()
+
+func _on_start_button_mouse_entered() -> void:
+	$"hover sound".play()
+
+
+func _on_exit_button_mouse_entered() -> void:
+	$"hover sound".play()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dqncchs5hk006"]
+[gd_scene load_steps=17 format=3 uid="uid://dqncchs5hk006"]
 
 [ext_resource type="Script" uid="uid://dsjugnsiyeabi" path="res://mainMenu.gd" id="1_83s16"]
 [ext_resource type="Texture2D" uid="uid://70khruaajksd" path="res://images/main_menu.png" id="2_w7d22"]
@@ -9,6 +9,44 @@
 [ext_resource type="Texture2D" uid="uid://d0lmc0j8wkugm" path="res://images/stackOfPaperhover.png" id="4_rdsan"]
 [ext_resource type="Texture2D" uid="uid://cgsadr841qmbq" path="res://images/sortie sign pixel copy.png" id="5_hvu0j"]
 [ext_resource type="Texture2D" uid="uid://c10lcymj13yjj" path="res://images/shoppingCart.png" id="9_rdsan"]
+[ext_resource type="Texture2D" uid="uid://twjld6yqi152" path="res://images/shoppingcart hover.png" id="10_efmur"]
+[ext_resource type="Texture2D" uid="uid://cx841mx5ijccq" path="res://coinpng.png" id="11_ltgao"]
+[ext_resource type="Texture2D" uid="uid://tjwtet62nlkq" path="res://coinpng (1).png" id="12_7le7c"]
+[ext_resource type="Texture2D" uid="uid://dnhs76bu3wva" path="res://coinpng (2).png" id="13_gfslc"]
+[ext_resource type="AudioStream" uid="uid://bllwdblikhcle" path="res://assets/audio/bigSelect.wav" id="14_7le7c"]
+[ext_resource type="AudioStream" uid="uid://beblf58whcphr" path="res://assets/audio/pickUpItem.wav" id="15_gfslc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d23al"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_ltgao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7le7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gfslc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gfslc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gfslc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7le7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ltgao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ltgao")
+}],
+"loop": true,
+"name": &"coinspin",
+"speed": 6.0
+}]
 
 [node name="mainMenu" type="Node2D"]
 script = ExtResource("1_83s16")
@@ -35,19 +73,20 @@ theme_override_font_sizes/font_size = 152
 text = "JEUX DE MOTS"
 
 [node name="Cash" type="Label" parent="."]
-offset_left = 88.0
-offset_top = 127.0
-offset_right = 457.0
-offset_bottom = 223.0
-theme_override_colors/font_color = Color(1, 0.505366, 0.622974, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.568627)
+offset_left = 423.0
+offset_top = 48.0
+offset_right = 565.0
+offset_bottom = 155.0
+theme_override_colors/font_color = Color(1, 0.717647, 0.0941176, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 5
 theme_override_constants/shadow_outline_size = 5
 theme_override_fonts/font = ExtResource("4_o0ref")
-theme_override_font_sizes/font_size = 70
-text = "ARGENT:$0"
+theme_override_font_sizes/font_size = 81
+text = "0$"
 
 [node name="startButton" type="TextureButton" parent="."]
 offset_left = 668.0
@@ -68,15 +107,31 @@ texture_hover = ExtResource("5_hvu0j")
 stretch_mode = 5
 
 [node name="storeButton" type="TextureButton" parent="."]
-offset_left = 86.0
-offset_top = 15.0
-offset_right = 209.0
-offset_bottom = 111.0
+offset_left = 89.0
+offset_top = 39.0
+offset_right = 212.0
+offset_bottom = 135.0
 texture_normal = ExtResource("9_rdsan")
+texture_hover = ExtResource("10_efmur")
 stretch_mode = 0
 
-[node name="backgroundMusic" type="AudioStreamPlayer2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+process_mode = 3
+position = Vector2(340, 86)
+scale = Vector2(7.78125, 6.92056)
+sprite_frames = SubResource("SpriteFrames_d23al")
+animation = &"coinspin"
+frame_progress = 0.0885089
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="select sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_7le7c")
 
+[node name="hover sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_gfslc")
+
+[connection signal="mouse_entered" from="startButton" to="." method="_on_start_button_mouse_entered"]
+[connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]
+[connection signal="mouse_entered" from="exitButton" to="." method="_on_exit_button_mouse_entered"]
 [connection signal="pressed" from="exitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="mouse_entered" from="storeButton" to="." method="_on_store_button_mouse_entered"]
+[connection signal="pressed" from="storeButton" to="." method="_on_store_button_pressed"]
