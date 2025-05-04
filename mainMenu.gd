@@ -6,7 +6,7 @@ func _process(delta):
 func _ready():
 	Input.set_custom_mouse_cursor(null)
 	show()
-	if Global.abcd == false:
+	if Global.ABC == false:
 		$abcd.hide()
 	if Global.apple == false:
 		$apple.hide()
@@ -18,6 +18,8 @@ func _ready():
 		$math.hide()
 	if Global.pencilHolder == false:
 		$pencilHolder.hide()
+	if Global.pencil == false:
+		$pencil.hide()
 	if Global.pottedPlant == false:
 		$pottedPlant.hide()
 	if Global.stapler == false:

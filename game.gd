@@ -182,3 +182,20 @@ func _incorrect():
 	
 func _on_reward_timeout():
 	$reward.hide()
+
+
+
+func _on_hint_1_1_pressed() -> void:
+	$"select sound".play()
+
+func _on_hint_1_2_pressed() -> void:
+	$"select sound".play()
+
+func _on_hint_1_3_pressed() -> void:
+	$"select sound".play()
+
+func _on_hint_1_4_pressed() -> void:
+	$"select sound".play()
+
+func _on_hint_1_5_pressed() -> void:
+	$"select sound".play()

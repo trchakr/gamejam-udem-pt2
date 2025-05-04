@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://dyx351tg048b4"]
+[gd_scene load_steps=40 format=3 uid="uid://dyx351tg048b4"]
 
 [ext_resource type="Script" uid="uid://4e56cbhenm4u" path="res://game.gd" id="1_80nbo"]
 [ext_resource type="Texture2D" uid="uid://c8mnsqqv6n3uh" path="res://pages/main_menu_blur.png" id="2_vef74"]
@@ -38,6 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://cewxv5f52by88" path="res://pages/15. Normes_et_modalites.png" id="34_iu0sx"]
 [ext_resource type="Script" uid="uid://ckl53iela4uor" path="res://page_15.gd" id="35_iu0sx"]
 [ext_resource type="Texture2D" uid="uid://c33gitstx1ppb" path="res://images/restart.png" id="37_4v2jo"]
+[ext_resource type="AudioStream" uid="uid://bllwdblikhcle" path="res://assets/audio/bigSelect.wav" id="39_l1i01"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_80nbo")
@@ -2103,6 +2104,7 @@ offset_top = 963.0
 offset_right = 1891.0
 offset_bottom = 1084.0
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_hve3p")
 theme_override_font_sizes/font_size = 70
 placeholder_text = "Quel concept suis-je ?"
 
@@ -2113,5 +2115,14 @@ rotation = -0.959931
 scale = Vector2(6.09855, 6.09855)
 texture = ExtResource("5_7jktm")
 
+[node name="select sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("39_l1i01")
+
+[connection signal="mouse_entered" from="page1/hint 3" to="." method="_on_hint_3_mouse_entered"]
+[connection signal="pressed" from="page1/hint1_1" to="." method="_on_hint_1_1_pressed"]
+[connection signal="pressed" from="page1/hint1_2" to="." method="_on_hint_1_2_pressed"]
+[connection signal="pressed" from="page1/hint1_3" to="." method="_on_hint_1_3_pressed"]
+[connection signal="pressed" from="page1/hint1_4" to="." method="_on_hint_1_4_pressed"]
+[connection signal="pressed" from="page1/hint1_5" to="." method="_on_hint_1_5_pressed"]
 [connection signal="timeout" from="rewardTimer" to="." method="_on_reward_timeout"]
 [connection signal="text_submitted" from="answerBox" to="." method="_on_text_submitted"]

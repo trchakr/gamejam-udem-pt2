@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://cmg06pbaji0ev"]
+[gd_scene load_steps=16 format=3 uid="uid://cmg06pbaji0ev"]
 
 [ext_resource type="Script" uid="uid://d0lj28b0rqtao" path="res://store.gd" id="1_c176v"]
 [ext_resource type="Texture2D" uid="uid://70khruaajksd" path="res://images/main_menu.png" id="2_s3f3m"]
 [ext_resource type="Texture2D" uid="uid://pk74vb23f5hk" path="res://scrollbar boxes/box_abcbanner.png" id="3_sxxsk"]
+[ext_resource type="Texture2D" uid="uid://bbnvhn0uhts8r" path="res://images/abcdbanner.png" id="4_jdax8"]
 [ext_resource type="Texture2D" uid="uid://bwa2nw131cf2t" path="res://scrollbar boxes/box_apple.png" id="5_a4gqu"]
 [ext_resource type="Texture2D" uid="uid://bktb3myq1uh34" path="res://scrollbar boxes/box_bookcase.png" id="5_mxlhg"]
 [ext_resource type="Texture2D" uid="uid://yhqpycmanel0" path="res://scrollbar boxes/box_chair.png" id="6_fsgxa"]
@@ -53,7 +54,7 @@ layout_mode = 2
 toggle_mode = true
 texture_normal = ExtResource("6_fsgxa")
 
-[node name="hbPencil" type="TextureButton" parent="storeBar/HBoxContainer"]
+[node name="pencil" type="TextureButton" parent="storeBar/HBoxContainer"]
 layout_mode = 2
 toggle_mode = true
 texture_normal = ExtResource("7_nvomd")
@@ -82,6 +83,21 @@ texture_normal = ExtResource("11_hayl1")
 layout_mode = 2
 toggle_mode = true
 texture_normal = ExtResource("12_q7j3g")
+
+[node name="ABCBuy" type="Button" parent="."]
+visible = false
+offset_left = 1225.0
+offset_top = 592.0
+offset_right = 1734.0
+offset_bottom = 737.0
+theme_override_font_sizes/font_size = 100
+text = "Buy ($200)"
+
+[node name="abcd" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(940.833, 530.969)
+scale = Vector2(11.6007, 11.6007)
+texture = ExtResource("4_jdax8")
 
 [node name="exitButton" type="TextureButton" parent="."]
 offset_left = 22.0

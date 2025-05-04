@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dqncchs5hk006"]
+[gd_scene load_steps=27 format=3 uid="uid://dqncchs5hk006"]
 
 [ext_resource type="Script" uid="uid://dsjugnsiyeabi" path="res://mainMenu.gd" id="1_83s16"]
 [ext_resource type="Texture2D" uid="uid://70khruaajksd" path="res://images/main_menu.png" id="2_w7d22"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://ce5ypxxkopkh8" path="res://images/bookcase.png" id="20_au7jj"]
 [ext_resource type="Texture2D" uid="uid://b8jjqrw5rqk5a" path="res://images/window.png" id="22_bgebw"]
 [ext_resource type="Texture2D" uid="uid://cxa2a2upw8e7n" path="res://images/classroom.png" id="24_x3tbe"]
+[ext_resource type="Texture2D" uid="uid://buo7v0thd6001" path="res://images/pencil.png" id="25_oqolq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d23al"]
 animations = [{
@@ -159,19 +160,19 @@ scale = Vector2(10.9688, 10.9688)
 texture = ExtResource("17_d23al")
 
 [node name="pencilHolder" type="Sprite2D" parent="."]
-position = Vector2(463, 649)
-scale = Vector2(3.23438, 3.23438)
+position = Vector2(477, 621)
+scale = Vector2(5.24219, 5.24219)
 texture = ExtResource("19_kthbb")
+
+[node name="pencil" type="Sprite2D" parent="."]
+position = Vector2(69.5, 928.5)
+scale = Vector2(3.46875, 4.40625)
+texture = ExtResource("25_oqolq")
 
 [node name="pottedPlant" type="Sprite2D" parent="."]
 position = Vector2(1543, 613)
 scale = Vector2(9.71875, 9.71875)
 texture = ExtResource("14_ltgao")
-
-[node name="stapler" type="Sprite2D" parent="."]
-position = Vector2(556, 604)
-scale = Vector2(6.66667, 6.66667)
-texture = ExtResource("15_7le7c")
 
 [node name="window" type="Sprite2D" parent="."]
 position = Vector2(385, 435)
@@ -182,6 +183,11 @@ texture = ExtResource("22_bgebw")
 position = Vector2(957, 462)
 scale = Vector2(5.82222, 5.82222)
 texture = ExtResource("24_x3tbe")
+
+[node name="stapler" type="Sprite2D" parent="."]
+position = Vector2(576, 616)
+scale = Vector2(7.16665, 7.16665)
+texture = ExtResource("15_7le7c")
 
 [connection signal="mouse_entered" from="startButton" to="." method="_on_start_button_mouse_entered"]
 [connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]
