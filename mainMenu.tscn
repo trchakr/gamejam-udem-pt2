@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dqncchs5hk006"]
+[gd_scene load_steps=16 format=3 uid="uid://dqncchs5hk006"]
 
 [ext_resource type="Script" uid="uid://dsjugnsiyeabi" path="res://mainMenu.gd" id="1_83s16"]
 [ext_resource type="Texture2D" uid="uid://70khruaajksd" path="res://images/main_menu.png" id="2_w7d22"]
@@ -7,8 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://15i4h0ulkxij" path="res://images/SORTIE.png" id="4_hvu0j"]
 [ext_resource type="FontFile" uid="uid://cmhlxw2ybg0ve" path="res://assets/fonts/VCR_OSD_MONO_1.001.ttf" id="4_o0ref"]
 [ext_resource type="Texture2D" uid="uid://d0lmc0j8wkugm" path="res://images/stackOfPaperhover.png" id="4_rdsan"]
+[ext_resource type="Texture2D" uid="uid://bbnvhn0uhts8r" path="res://images/abcdbanner.png" id="5_efmur"]
 [ext_resource type="Texture2D" uid="uid://cgsadr841qmbq" path="res://images/sortie sign pixel copy.png" id="5_hvu0j"]
 [ext_resource type="Texture2D" uid="uid://c10lcymj13yjj" path="res://images/shoppingCart.png" id="9_rdsan"]
+[ext_resource type="Texture2D" uid="uid://bc8b1te16ldjp" path="res://images/apple teacher desk pixel.png" id="11_ltgao"]
+[ext_resource type="Texture2D" uid="uid://c6kgfu7bv8kt3" path="res://images/chair.png" id="12_7le7c"]
+[ext_resource type="Texture2D" uid="uid://c4oqip1sfb74m" path="res://images/pencil holder.png" id="13_gfslc"]
+[ext_resource type="Texture2D" uid="uid://c2v5no1c4ws13" path="res://images/pottedPlant.png" id="14_ltgao"]
+[ext_resource type="Texture2D" uid="uid://ck4pdqoyxyaab" path="res://images/stapler.png" id="15_7le7c"]
 
 [node name="mainMenu" type="Node2D"]
 script = ExtResource("1_83s16")
@@ -49,6 +55,11 @@ theme_override_fonts/font = ExtResource("4_o0ref")
 theme_override_font_sizes/font_size = 70
 text = "ARGENT:$0"
 
+[node name="abcd" type="Sprite2D" parent="."]
+position = Vector2(960.056, 540.156)
+scale = Vector2(11.9993, 11.9965)
+texture = ExtResource("5_efmur")
+
 [node name="startButton" type="TextureButton" parent="."]
 offset_left = 668.0
 offset_top = 578.0
@@ -75,8 +86,33 @@ offset_bottom = 111.0
 texture_normal = ExtResource("9_rdsan")
 stretch_mode = 0
 
+[node name="apple" type="Sprite2D" parent="."]
+position = Vector2(777, 574)
+scale = Vector2(5.6854, 5.68407)
+texture = ExtResource("11_ltgao")
+
+[node name="chair" type="Sprite2D" parent="."]
+position = Vector2(1081.5, 662.5)
+scale = Vector2(10.9688, 10.9688)
+texture = ExtResource("12_7le7c")
+
+[node name="pencilHolder" type="Sprite2D" parent="."]
+position = Vector2(456, 640)
+scale = Vector2(4.78125, 4.78125)
+texture = ExtResource("13_gfslc")
+
+[node name="pottedPlant" type="Sprite2D" parent="."]
+position = Vector2(1562, 608)
+scale = Vector2(8.45312, 8.45312)
+texture = ExtResource("14_ltgao")
+
 [node name="backgroundMusic" type="AudioStreamPlayer2D" parent="."]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="stapler" type="Sprite2D" parent="."]
+position = Vector2(598, 610)
+scale = Vector2(7.74999, 7.74999)
+texture = ExtResource("15_7le7c")
 
 [connection signal="pressed" from="exitButton" to="." method="_on_exit_button_pressed"]

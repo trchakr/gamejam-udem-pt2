@@ -37,7 +37,7 @@
 [ext_resource type="Script" uid="uid://bscrtpacxkjxn" path="res://page_14.gd" id="33_iu0sx"]
 [ext_resource type="Texture2D" uid="uid://cewxv5f52by88" path="res://pages/15. Normes_et_modalites.png" id="34_iu0sx"]
 [ext_resource type="Script" uid="uid://ckl53iela4uor" path="res://page_15.gd" id="35_iu0sx"]
-[ext_resource type="Texture2D" uid="uid://bc8b1te16ldjp" path="res://images/apple teacher desk pixel.png" id="37_4v2jo"]
+[ext_resource type="Texture2D" uid="uid://c33gitstx1ppb" path="res://images/restart.png" id="37_4v2jo"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_80nbo")
@@ -2090,10 +2090,10 @@ texture_normal = ExtResource("16_e8heu")
 stretch_mode = 0
 
 [node name="gameRestart" type="TextureButton" parent="."]
-offset_left = 1693.0
-offset_top = 54.0
-offset_right = 1804.0
-offset_bottom = 178.0
+offset_left = 1773.0
+offset_top = 29.0
+offset_right = 1884.0
+offset_bottom = 153.0
 texture_normal = ExtResource("37_4v2jo")
 stretch_mode = 0
 
