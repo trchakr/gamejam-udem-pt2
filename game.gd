@@ -4,11 +4,12 @@ var score = 5
 
 # Load the custom images for the mouse cursor.
 @onready var arrow = load("res://images/highlighter.png")
+@onready var tutorial_sprite = $tutorial_sprite  # Reference to existing sprite
+var tutorial_button = Button.new()
 
 func _ready():
 	# Hide all pages first
 	hide_all_pages()
-	
 	$background.show()
 	page_show(Global.document)
 	
@@ -17,6 +18,13 @@ func _ready():
 	$gameRestart.pressed.connect(_restartGame)
 	
 	Input.set_custom_mouse_cursor(arrow)
+	
+	setup_tutorial()
+	if Global.first_time or Global.reset_tutorial:
+		print("Showing tutorial")
+		show_tutorial()
+		Global.first_time = false
+		Global.reset_tutorial = false
 
 # Add this new function to hide all pages
 func hide_all_pages():
@@ -29,8 +37,35 @@ func _exitGame():
 	get_tree().change_scene_to_file("res://mainMenu.tscn")
 	
 func _restartGame():
-	Global.document = 1
 	get_tree().change_scene_to_file("res://mainMenu.tscn")
+	Global.document = 1
+	Global.reset_tutorial = true
+
+func setup_tutorial():
+	# The sprite is already in the scene, don't add it again
+	if tutorial_sprite:
+		tutorial_sprite.centered = true
+		tutorial_sprite.visible = false
+	
+	# Setup a transparent button that covers the whole tutorial
+	tutorial_button.flat = true
+	tutorial_button.modulate = Color(1, 1, 1, 0)  # Fully transparent
+	tutorial_button.size = Vector2(get_viewport_rect().size.x, get_viewport_rect().size.y)
+	tutorial_button.position = Vector2.ZERO
+	tutorial_button.visible = false
+	tutorial_button.pressed.connect(hide_tutorial)
+	add_child(tutorial_button)
+
+func hide_tutorial():
+	tutorial_sprite.visible = false
+	tutorial_button.visible = false
+	get_tree().paused = false
+
+# Show the tutorial overlay
+func show_tutorial():
+	if tutorial_sprite:
+		tutorial_sprite.visible = true
+		tutorial_button.visible = true
 	
 func page_show(x):
 	# First hide all pages
@@ -151,7 +186,7 @@ func _on_text_submitted(new_text: String) -> void:
 				_correct()
 			else:
 				_incorrect()
-	
+			
 func _correct():
 	print(score, "correct")
 	if score < 0:
@@ -187,15 +222,11 @@ func _on_reward_timeout():
 
 func _on_hint_1_1_pressed() -> void:
 	$"select sound".play()
-
 func _on_hint_1_2_pressed() -> void:
 	$"select sound".play()
-
 func _on_hint_1_3_pressed() -> void:
 	$"select sound".play()
-
 func _on_hint_1_4_pressed() -> void:
 	$"select sound".play()
-
 func _on_hint_1_5_pressed() -> void:
 	$"select sound".play()

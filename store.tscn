@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cmg06pbaji0ev"]
+[gd_scene load_steps=28 format=3 uid="uid://cmg06pbaji0ev"]
 
 [ext_resource type="Script" uid="uid://d0lj28b0rqtao" path="res://store.gd" id="1_c176v"]
 [ext_resource type="Texture2D" uid="uid://70khruaajksd" path="res://images/main_menu.png" id="2_s3f3m"]
@@ -15,6 +15,19 @@
 [ext_resource type="Texture2D" uid="uid://6br8y7rq1m6d" path="res://scrollbar boxes/box_window.png" id="12_q7j3g"]
 [ext_resource type="Texture2D" uid="uid://ksyw1grs02fm" path="res://images/backarrow.png" id="13_hayl1"]
 [ext_resource type="Texture2D" uid="uid://be6i1i6kqlfbt" path="res://images/stackOfPaper.png" id="14_jdax8"]
+[ext_resource type="Theme" uid="uid://cxe2ysmibklrv" path="res://buyTheme.tres" id="15_pilm7"]
+[ext_resource type="Texture2D" uid="uid://bc8b1te16ldjp" path="res://images/apple teacher desk pixel.png" id="16_afjsh"]
+[ext_resource type="Texture2D" uid="uid://c6kgfu7bv8kt3" path="res://images/chair.png" id="17_hi8wy"]
+[ext_resource type="Texture2D" uid="uid://ce5ypxxkopkh8" path="res://images/bookcase.png" id="17_pmeuj"]
+[ext_resource type="Texture2D" uid="uid://buo7v0thd6001" path="res://images/pencil.png" id="19_pejdj"]
+[ext_resource type="Texture2D" uid="uid://cxa2a2upw8e7n" path="res://images/classroom.png" id="20_sqkq8"]
+[ext_resource type="Texture2D" uid="uid://c4oqip1sfb74m" path="res://images/pencil holder.png" id="21_pilm7"]
+[ext_resource type="Texture2D" uid="uid://c2v5no1c4ws13" path="res://images/pottedPlant.png" id="22_ka4fl"]
+[ext_resource type="Texture2D" uid="uid://ck4pdqoyxyaab" path="res://images/stapler.png" id="23_jq5oj"]
+[ext_resource type="FontFile" uid="uid://cmhlxw2ybg0ve" path="res://assets/fonts/VCR_OSD_MONO_1.001.ttf" id="23_sqkq8"]
+[ext_resource type="Texture2D" uid="uid://b8jjqrw5rqk5a" path="res://images/window.png" id="24_vwody"]
+
+[sub_resource type="Theme" id="Theme_pilm7"]
 
 [node name="store" type="Node2D"]
 script = ExtResource("1_c176v")
@@ -33,6 +46,7 @@ scale = Vector2(3.5, 3.5)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="storeBar"]
 layout_mode = 2
+theme_override_constants/separation = 4
 
 [node name="ABC" type="TextureButton" parent="storeBar/HBoxContainer"]
 layout_mode = 2
@@ -84,21 +98,6 @@ layout_mode = 2
 toggle_mode = true
 texture_normal = ExtResource("12_q7j3g")
 
-[node name="ABCBuy" type="Button" parent="."]
-visible = false
-offset_left = 1225.0
-offset_top = 592.0
-offset_right = 1734.0
-offset_bottom = 737.0
-theme_override_font_sizes/font_size = 100
-text = "Buy ($200)"
-
-[node name="abcd" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(940.833, 530.969)
-scale = Vector2(11.6007, 11.6007)
-texture = ExtResource("4_jdax8")
-
 [node name="exitButton" type="TextureButton" parent="."]
 offset_left = 22.0
 offset_top = -7.0
@@ -114,3 +113,165 @@ offset_right = 881.0
 offset_bottom = 738.0
 texture_normal = ExtResource("14_jdax8")
 stretch_mode = 0
+
+[node name="ABCBuy" type="Button" parent="."]
+visible = false
+offset_left = 1107.0
+offset_top = 619.0
+offset_right = 1745.0
+offset_bottom = 737.0
+theme = SubResource("Theme_pilm7")
+theme_override_fonts/font = ExtResource("23_sqkq8")
+theme_override_font_sizes/font_size = 70
+text = "Acheter ($500)"
+
+[node name="abcd" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(940.833, 530.969)
+scale = Vector2(11.6007, 11.6007)
+texture = ExtResource("4_jdax8")
+
+[node name="appleBuy" type="Button" parent="."]
+visible = false
+offset_left = 1160.0
+offset_top = 592.0
+offset_right = 1807.0
+offset_bottom = 737.0
+theme = ExtResource("15_pilm7")
+theme_override_fonts/font = ExtResource("23_sqkq8")
+theme_override_font_sizes/font_size = 70
+text = "Acheter ($250)"
+
+[node name="apple" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(771, 586)
+scale = Vector2(5.37153, 5.37153)
+texture = ExtResource("16_afjsh")
+
+[node name="bookcase" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1317, 499)
+scale = Vector2(12.2656, 12.2656)
+texture = ExtResource("17_pmeuj")
+
+[node name="bookcaseBuy" type="Button" parent="."]
+visible = false
+offset_left = 1225.0
+offset_top = 592.0
+offset_right = 1734.0
+offset_bottom = 737.0
+theme_override_fonts/font = ExtResource("23_sqkq8")
+theme_override_font_sizes/font_size = 70
+text = "Acheter ($1000)"
+
+[node name="chairBuy" type="Button" parent="."]
+visible = false
+offset_left = 1225.0
+offset_top = 592.0
+offset_right = 1734.0
+offset_bottom = 737.0
+theme_override_fonts/font = ExtResource("23_sqkq8")
+theme_override_font_sizes/font_size = 70
+text = "Acheter ($500)"
+
+[node name="chair" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1095, 662)
+scale = Vector2(10.9688, 10.9688)
+texture = ExtResource("17_hi8wy")
+
+[node name="pencilBuy" type="Button" parent="."]
+visible = false
+offset_left = 1225.0
+offset_top = 592.0
+offset_right = 1734.0
+offset_bottom = 737.0
+theme_override_fonts/font = ExtResource("23_sqkq8")
+theme_override_font_sizes/font_size = 70
+text = "Acheter ($250)"
+
+[node name="pencil" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(69.5, 928.5)
+scale = Vector2(3.46875, 4.40625)
+texture = ExtResource("19_pejdj")
+
+[node name="mathBuy" type="Button" parent="."]
+visible = false
+offset_left = 1225.0
+offset_top = 592.0
+offset_right = 1734.0
+offset_bottom = 737.0
+theme_override_fonts/font = ExtResource("23_sqkq8")
+theme_override_font_sizes/font_size = 70
+text = "Acheter ($2000)"
+
+[node name="math" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(957, 462)
+scale = Vector2(5.82222, 5.82222)
+texture = ExtResource("20_sqkq8")
+
+[node name="pencilHolderBuy" type="Button" parent="."]
+visible = false
+offset_left = 1113.0
+offset_top = 593.0
+offset_right = 1816.0
+offset_bottom = 738.0
+theme_override_fonts/font = ExtResource("23_sqkq8")
+theme_override_font_sizes/font_size = 70
+text = "Acheter ($500)"
+
+[node name="pencilHolder" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(477, 621)
+scale = Vector2(5.24219, 5.24219)
+texture = ExtResource("21_pilm7")
+
+[node name="pottedPlant" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1543, 613)
+scale = Vector2(9.71875, 9.71875)
+texture = ExtResource("22_ka4fl")
+
+[node name="plantBuy" type="Button" parent="."]
+visible = false
+offset_left = 1113.0
+offset_top = 590.0
+offset_right = 1816.0
+offset_bottom = 735.0
+theme_override_fonts/font = ExtResource("23_sqkq8")
+theme_override_font_sizes/font_size = 70
+text = "Acheter ($750)"
+
+[node name="staplerBuy" type="Button" parent="."]
+visible = false
+offset_left = 988.0
+offset_top = 591.0
+offset_right = 1816.0
+offset_bottom = 736.0
+theme_override_fonts/font = ExtResource("23_sqkq8")
+theme_override_font_sizes/font_size = 70
+text = "Acheter ($500)"
+
+[node name="stapler" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(576, 616)
+scale = Vector2(7.16665, 7.16665)
+texture = ExtResource("23_jq5oj")
+
+[node name="windowBuy" type="Button" parent="."]
+visible = false
+offset_left = 1225.0
+offset_top = 592.0
+offset_right = 1734.0
+offset_bottom = 737.0
+theme_override_fonts/font = ExtResource("23_sqkq8")
+theme_override_font_sizes/font_size = 70
+text = "Acheter ($1000)"
+
+[node name="window" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(385, 435)
+scale = Vector2(12.0703, 12.0703)
+texture = ExtResource("24_vwody")

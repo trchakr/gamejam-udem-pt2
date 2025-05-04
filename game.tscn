@@ -1,11 +1,10 @@
-[gd_scene load_steps=40 format=3 uid="uid://dyx351tg048b4"]
+[gd_scene load_steps=41 format=3 uid="uid://dyx351tg048b4"]
 
 [ext_resource type="Script" uid="uid://4e56cbhenm4u" path="res://game.gd" id="1_80nbo"]
 [ext_resource type="Texture2D" uid="uid://c8mnsqqv6n3uh" path="res://pages/main_menu_blur.png" id="2_vef74"]
 [ext_resource type="Texture2D" uid="uid://csr8tnowxa5qu" path="res://pages/1. demarche.png" id="3_vef74"]
 [ext_resource type="Script" uid="uid://dhaaa73aqqbf5" path="res://page_1.gd" id="4_e36ub"]
 [ext_resource type="FontFile" uid="uid://cmhlxw2ybg0ve" path="res://assets/fonts/VCR_OSD_MONO_1.001.ttf" id="4_hve3p"]
-[ext_resource type="Texture2D" uid="uid://bfp4mi5j66yqj" path="res://images/highlighter.png" id="5_7jktm"]
 [ext_resource type="Theme" uid="uid://bl8v2xyhhh2cj" path="res://generic_text.tres" id="5_hve3p"]
 [ext_resource type="Texture2D" uid="uid://b8x6sliwbug5f" path="res://pages/2. eval normative.png" id="6_hve3p"]
 [ext_resource type="Texture2D" uid="uid://b5sxa4bqrlgng" path="res://pages/3. eval compé.png" id="7_iotsf"]
@@ -38,7 +37,9 @@
 [ext_resource type="Texture2D" uid="uid://cewxv5f52by88" path="res://pages/15. Normes_et_modalites.png" id="34_iu0sx"]
 [ext_resource type="Script" uid="uid://ckl53iela4uor" path="res://page_15.gd" id="35_iu0sx"]
 [ext_resource type="Texture2D" uid="uid://c33gitstx1ppb" path="res://images/restart.png" id="37_4v2jo"]
+[ext_resource type="Texture2D" uid="uid://c2rh2abcewmta" path="res://images/backarrow_shadow.png" id="37_r62pu"]
 [ext_resource type="AudioStream" uid="uid://bllwdblikhcle" path="res://assets/audio/bigSelect.wav" id="39_l1i01"]
+[ext_resource type="Texture2D" uid="uid://dt50qw7d0lktc" path="res://images/tutorial.png" id="41_klri6"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_80nbo")
@@ -1719,7 +1720,6 @@ offset_right = 50.0
 offset_bottom = 44.0
 
 [node name="page13" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(951.357, 408.388)
 scale = Vector2(12.3692, 12.3692)
 texture = ExtResource("8_mfdv2")
@@ -1759,6 +1759,7 @@ horizontal_alignment = 2
 autowrap_mode = 2
 
 [node name="Label1_3" type="Label" parent="page13"]
+visible = false
 offset_left = -68.9907
 offset_top = 34.3283
 offset_right = 296.009
@@ -1775,6 +1776,7 @@ horizontal_alignment = 2
 autowrap_mode = 2
 
 [node name="Label1_4" type="Label" parent="page13"]
+visible = false
 offset_left = 5.22618
 offset_top = -20.0813
 offset_right = 359.226
@@ -2088,6 +2090,7 @@ offset_top = -5.0
 offset_right = 155.0
 offset_bottom = 119.0
 texture_normal = ExtResource("16_e8heu")
+texture_hover = ExtResource("37_r62pu")
 stretch_mode = 0
 
 [node name="gameRestart" type="TextureButton" parent="."]
@@ -2108,15 +2111,14 @@ theme_override_fonts/font = ExtResource("4_hve3p")
 theme_override_font_sizes/font_size = 70
 placeholder_text = "Quel concept suis-je ?"
 
-[node name="Highlighter" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1034.84, 694.806)
-rotation = -0.959931
-scale = Vector2(6.09855, 6.09855)
-texture = ExtResource("5_7jktm")
-
 [node name="select sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("39_l1i01")
+
+[node name="tutorial_sprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(965.778, 540)
+scale = Vector2(1.48489, 1.49725)
+texture = ExtResource("41_klri6")
 
 [connection signal="mouse_entered" from="page1/hint 3" to="." method="_on_hint_3_mouse_entered"]
 [connection signal="pressed" from="page1/hint1_1" to="." method="_on_hint_1_1_pressed"]

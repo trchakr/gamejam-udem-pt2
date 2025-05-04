@@ -1,7 +1,9 @@
 extends Node
 
-var cash = 200 
+var cash = 0 
 var document = 1
+var first_time = true 
+var reset_tutorial = false 
 
 var ABC = false
 var apple = false

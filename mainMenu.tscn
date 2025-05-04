@@ -71,21 +71,27 @@ position = Vector2(961.222, 541.25)
 scale = Vector2(11.95, 11.95)
 texture = ExtResource("5_efmur")
 
+[node name="pencil" type="Sprite2D" parent="."]
+position = Vector2(69.5, 928.5)
+scale = Vector2(3.46875, 4.40625)
+texture = ExtResource("25_oqolq")
+
 [node name="Label" type="Label" parent="."]
-offset_left = 115.0
-offset_top = 895.0
-offset_right = 1804.0
-offset_bottom = 1103.0
+offset_left = 42.0
+offset_top = 910.0
+offset_right = 1999.0
+offset_bottom = 1266.0
 theme_override_colors/font_color = Color(0.719228, 0.0955382, 0.256972, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.462745)
 theme_override_colors/font_outline_color = Color(0.512253, 0.0492422, 0.174064, 1)
+theme_override_constants/line_spacing = 50
 theme_override_constants/shadow_offset_x = 10
 theme_override_constants/shadow_offset_y = 10
 theme_override_constants/outline_size = 30
 theme_override_constants/shadow_outline_size = 20
 theme_override_fonts/font = ExtResource("3_fy5us")
-theme_override_font_sizes/font_size = 152
-text = "JEUX DE MOTS"
+theme_override_font_sizes/font_size = 142
+text = "CLASSE DE RÊVE"
 
 [node name="Cash" type="Label" parent="."]
 offset_left = 423.0
@@ -163,11 +169,6 @@ texture = ExtResource("17_d23al")
 position = Vector2(477, 621)
 scale = Vector2(5.24219, 5.24219)
 texture = ExtResource("19_kthbb")
-
-[node name="pencil" type="Sprite2D" parent="."]
-position = Vector2(69.5, 928.5)
-scale = Vector2(3.46875, 4.40625)
-texture = ExtResource("25_oqolq")
 
 [node name="pottedPlant" type="Sprite2D" parent="."]
 position = Vector2(1543, 613)

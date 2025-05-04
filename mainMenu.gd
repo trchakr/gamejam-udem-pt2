@@ -27,10 +27,8 @@ func _ready():
 	if Global.window == false:
 		$window.hide()
 	
-	add_child($startButton)
 	$startButton.pressed.connect(_startGame)
 	
-	add_child($storeButton)
 	$storeButton.pressed.connect(_openStore)
 
 	
