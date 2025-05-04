@@ -6,6 +6,24 @@ func _process(delta):
 func _ready():
 	Input.set_custom_mouse_cursor(null)
 	show()
+	if Global.abcd == false:
+		$abcd.hide()
+	if Global.apple == false:
+		$apple.hide()
+	if Global.bookcase == false:
+		$bookcase.hide()
+	if Global.chair == false:
+		$chair.hide()
+	if Global.math == false:
+		$math.hide()
+	if Global.pencilHolder == false:
+		$pencilHolder.hide()
+	if Global.pottedPlant == false:
+		$pottedPlant.hide()
+	if Global.stapler == false:
+		$stapler.hide()
+	if Global.window == false:
+		$window.hide()
 	
 	add_child($startButton)
 	$startButton.pressed.connect(_startGame)
