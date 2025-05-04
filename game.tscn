@@ -1,14 +1,12 @@
-[gd_scene load_steps=38 format=3 uid="uid://dyx351tg048b4"]
+[gd_scene load_steps=39 format=3 uid="uid://dyx351tg048b4"]
 
 [ext_resource type="Script" uid="uid://4e56cbhenm4u" path="res://game.gd" id="1_80nbo"]
-[ext_resource type="Texture2D" uid="uid://bq2jyf3u1n3kb" path="res://pages/page_mockup.png" id="2_e2o6t"]
 [ext_resource type="Texture2D" uid="uid://c8mnsqqv6n3uh" path="res://pages/main_menu_blur.png" id="2_vef74"]
 [ext_resource type="Texture2D" uid="uid://csr8tnowxa5qu" path="res://pages/1. demarche.png" id="3_vef74"]
 [ext_resource type="Script" uid="uid://dhaaa73aqqbf5" path="res://page_1.gd" id="4_e36ub"]
 [ext_resource type="FontFile" uid="uid://cmhlxw2ybg0ve" path="res://assets/fonts/VCR_OSD_MONO_1.001.ttf" id="4_hve3p"]
 [ext_resource type="Texture2D" uid="uid://bfp4mi5j66yqj" path="res://images/highlighter.png" id="5_7jktm"]
 [ext_resource type="Theme" uid="uid://bl8v2xyhhh2cj" path="res://generic_text.tres" id="5_hve3p"]
-[ext_resource type="Texture2D" path="res://images/reconnaissance.png" id="5_ryrav"]
 [ext_resource type="Texture2D" uid="uid://b8x6sliwbug5f" path="res://pages/2. eval normative.png" id="6_hve3p"]
 [ext_resource type="Texture2D" uid="uid://b5sxa4bqrlgng" path="res://pages/3. eval compé.png" id="7_iotsf"]
 [ext_resource type="Script" uid="uid://bkbkk3x12lkj5" path="res://page_2.gd" id="8_hb5m1"]
@@ -35,8 +33,11 @@
 [ext_resource type="Script" uid="uid://db61nau60ot58" path="res://page_11.gd" id="27_7knny"]
 [ext_resource type="Script" uid="uid://bs0cmeftm2u0h" path="res://page_12.gd" id="29_082n1"]
 [ext_resource type="Script" uid="uid://thp05fhfnssp" path="res://page_13_(recon).gd" id="31_aa0lp"]
+[ext_resource type="Texture2D" uid="uid://dw8kvqen3menx" path="res://pages/14._Aide_a_lapprentissage.png" id="32_iu0sx"]
 [ext_resource type="Script" uid="uid://bscrtpacxkjxn" path="res://page_14.gd" id="33_iu0sx"]
+[ext_resource type="Texture2D" uid="uid://cewxv5f52by88" path="res://pages/15. Normes_et_modalites.png" id="34_iu0sx"]
 [ext_resource type="Script" uid="uid://ckl53iela4uor" path="res://page_15.gd" id="35_iu0sx"]
+[ext_resource type="Texture2D" uid="uid://bc8b1te16ldjp" path="res://images/apple teacher desk pixel.png" id="37_4v2jo"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_80nbo")
@@ -47,7 +48,6 @@ scale = Vector2(12.0056, 12.0056)
 texture = ExtResource("2_vef74")
 
 [node name="page1" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(937, 404)
 scale = Vector2(12.5031, 12.5031)
 texture = ExtResource("3_vef74")
@@ -1819,17 +1819,256 @@ offset_bottom = 10.0
 
 [node name="page14" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(960, 549)
-scale = Vector2(1.08656, 1.08656)
-texture = ExtResource("2_e2o6t")
+position = Vector2(940, 505)
+scale = Vector2(10.0994, 10.0994)
+texture = ExtResource("32_iu0sx")
 script = ExtResource("33_iu0sx")
+
+[node name="hint 5" type="Label" parent="page14"]
+offset_left = -39.0121
+offset_top = -9.80254
+offset_right = 197.988
+offset_bottom = 155.197
+scale = Vector2(0.2, 0.2)
+theme = ExtResource("5_hve3p")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_hve3p")
+theme_override_font_sizes/font_size = 20
+text = "Utiliser le forum de quest
+
+Atelier auto-correction
+
+Séance de révision
+
+Pratique non graduée"
+
+[node name="hint 6" type="Label" parent="page14"]
+offset_left = 23.1697
+offset_top = -19.209
+offset_right = 175.17
+offset_bottom = 78.791
+scale = Vector2(0.2, 0.2)
+theme = ExtResource("5_hve3p")
+theme_override_colors/font_color = Color(0.945098, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_hve3p")
+theme_override_font_sizes/font_size = 20
+text = "Heures du 
+bureau:
+15h-17h
+
+Je veux 
+t'aider
+:)"
+horizontal_alignment = 1
+
+[node name="Label1_1" type="Label" parent="page14"]
+visible = false
+offset_left = -76.242
+offset_top = -22.2785
+offset_right = 393.758
+offset_bottom = 90.7215
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je suis une visée centrale de l’évaluation formative."
+autowrap_mode = 2
+
+[node name="Label1_2" type="Label" parent="page14"]
+visible = false
+offset_left = -78.5194
+offset_top = 20.0012
+offset_right = 428.481
+offset_bottom = 220.001
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je suis incompatible avec une évaluation punitive ou strictement sommative.
+
+
+
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label1_3" type="Label" parent="page14"]
+visible = false
+offset_left = 52.2803
+offset_top = -30.5958
+offset_right = 199.28
+offset_bottom = 111.404
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je soutiens l’élève dans sa progression par des rétroactions utiles."
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="Label1_4" type="Label" parent="page14"]
+visible = false
+offset_left = 2.17836
+offset_top = 13.4661
+offset_right = 381.178
+offset_bottom = 184.466
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je m’inscris dans une logique d’accompagnement.
+
+
+
+"
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="hint1_1" type="Button" parent="page14"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -46.0
+offset_top = -11.0
+offset_right = 23.0
+offset_bottom = 11.0
+
+[node name="hint1_2" type="Button" parent="page14"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -43.0
+offset_top = 13.0
+offset_right = 10.0
+offset_bottom = 21.0
+
+[node name="hint1_3" type="Button" parent="page14"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 25.0
+offset_top = -20.0
+offset_right = 50.0
+offset_bottom = -5.0
+
+[node name="hint1_4" type="Button" parent="page14"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 27.0
+offset_top = -4.0
+offset_right = 50.0
+offset_bottom = 11.0
 
 [node name="page15" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(925, 691)
+position = Vector2(954, 558)
 scale = Vector2(11.6272, 11.6272)
-texture = ExtResource("5_ryrav")
+texture = ExtResource("34_iu0sx")
 script = ExtResource("35_iu0sx")
+
+[node name="Label1_1" type="Label" parent="page15"]
+visible = false
+offset_left = -57.9675
+offset_top = -38.7024
+offset_right = 412.032
+offset_bottom = 74.2976
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je suis écrite dans les documents comme le régime pédagogique ou les plans d’intervention.
+"
+autowrap_mode = 2
+
+[node name="Label1_2" type="Label" parent="page15"]
+visible = false
+offset_left = 26.0
+offset_top = -7.0
+offset_right = 293.0
+offset_bottom = 193.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je suis le cadre défini par l’école ou le ministère pour encadrer l’évaluation.
+
+
+
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label1_3" type="Label" parent="page15"]
+visible = false
+offset_left = -52.0
+offset_top = 15.0
+offset_right = 145.0
+offset_bottom = 70.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je garantis l’uniformité.
+"
+autowrap_mode = 2
+
+[node name="Label1_4" type="Label" parent="page15"]
+visible = false
+offset_left = -13.0
+offset_top = 20.0
+offset_right = 421.0
+offset_bottom = 162.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je précise les moments, 
+les formats, les pondérations des évaluations.
+
+
+"
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="hint1_1" type="Button" parent="page15"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -60.0
+offset_top = -26.0
+offset_right = 38.0
+offset_bottom = -13.0
+
+[node name="hint1_2" type="Button" parent="page15"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 43.0
+offset_top = -25.0
+offset_right = 63.0
+offset_bottom = -6.0
+
+[node name="hint1_3" type="Button" parent="page15"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -49.0
+offset_top = -8.0
+offset_right = -17.0
+offset_bottom = 29.0
+
+[node name="hint1_4" type="Button" parent="page15"]
+self_modulate = Color(1, 1, 1, 0)
+offset_top = -6.0
+offset_right = 52.0
+offset_bottom = 28.0
+
+[node name="hint 5" type="Label" parent="page15"]
+offset_left = -55.2154
+offset_top = -23.2214
+offset_right = 366.785
+offset_bottom = 12.7786
+scale = Vector2(0.2, 0.2)
+theme = ExtResource("5_hve3p")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_hve3p")
+theme_override_font_sizes/font_size = 35
+text = "PROFIL DE L'APPRENANT"
 
 [node name="reward" type="Label" parent="."]
 offset_left = 50.0
@@ -1848,6 +2087,14 @@ offset_top = -5.0
 offset_right = 155.0
 offset_bottom = 119.0
 texture_normal = ExtResource("16_e8heu")
+stretch_mode = 0
+
+[node name="gameRestart" type="TextureButton" parent="."]
+offset_left = 1693.0
+offset_top = 54.0
+offset_right = 1804.0
+offset_bottom = 178.0
+texture_normal = ExtResource("37_4v2jo")
 stretch_mode = 0
 
 [node name="answerBox" type="LineEdit" parent="."]

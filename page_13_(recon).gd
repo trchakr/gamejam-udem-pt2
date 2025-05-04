@@ -1,6 +1,4 @@
 extends Sprite2D
-extends Sprite2D
-
 func _ready():
 	add_child($hint1_1)
 	$hint1_1.pressed.connect(_hint1_1)
