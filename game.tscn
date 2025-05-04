@@ -1,22 +1,29 @@
-[gd_scene load_steps=18 format=3 uid="uid://dyx351tg048b4"]
+[gd_scene load_steps=25 format=3 uid="uid://dyx351tg048b4"]
 
 [ext_resource type="Script" uid="uid://4e56cbhenm4u" path="res://game.gd" id="1_80nbo"]
 [ext_resource type="Texture2D" uid="uid://bq2jyf3u1n3kb" path="res://pages/page_mockup.png" id="2_e2o6t"]
-[ext_resource type="Texture2D" uid="uid://cdh7h1lq83dp2" path="res://images/exit.png" id="2_fc0e3"]
 [ext_resource type="Texture2D" uid="uid://c8mnsqqv6n3uh" path="res://pages/main_menu_blur.png" id="2_vef74"]
 [ext_resource type="Texture2D" uid="uid://csr8tnowxa5qu" path="res://pages/1. demarche.png" id="3_vef74"]
+[ext_resource type="Script" uid="uid://dhaaa73aqqbf5" path="res://page_1.gd" id="4_e36ub"]
 [ext_resource type="FontFile" uid="uid://cmhlxw2ybg0ve" path="res://assets/fonts/VCR_OSD_MONO_1.001.ttf" id="4_hve3p"]
 [ext_resource type="Texture2D" uid="uid://bfp4mi5j66yqj" path="res://images/highlighter.png" id="5_7jktm"]
 [ext_resource type="Theme" uid="uid://bl8v2xyhhh2cj" path="res://generic_text.tres" id="5_hve3p"]
 [ext_resource type="Texture2D" path="res://images/reconnaissance.png" id="5_ryrav"]
 [ext_resource type="Texture2D" uid="uid://b8x6sliwbug5f" path="res://pages/2. eval normative.png" id="6_hve3p"]
 [ext_resource type="Texture2D" uid="uid://b5sxa4bqrlgng" path="res://pages/3. eval compé.png" id="7_iotsf"]
+[ext_resource type="Script" uid="uid://bkbkk3x12lkj5" path="res://page_2.gd" id="8_hb5m1"]
 [ext_resource type="FontFile" uid="uid://b7vv6gahjxjce" path="res://assets/fonts/04b-30.ttf" id="8_lc2xo"]
 [ext_resource type="Texture2D" uid="uid://dyhgakbqd1jqf" path="res://pages/13. reconnaissance.png" id="8_mfdv2"]
 [ext_resource type="Texture2D" uid="uid://dx6hucsuhdm5o" path="res://pages/4. corrigé.png" id="9_215e1"]
 [ext_resource type="Texture2D" uid="uid://bmy6e12n4nx08" path="res://pages/5. tache simple.png" id="10_7sc4i"]
+[ext_resource type="Script" uid="uid://dh8hxupsm23fo" path="res://page_3.gd" id="10_x5p1p"]
 [ext_resource type="Texture2D" uid="uid://b2hh5ql835wlw" path="res://pages/6. tache complex.png" id="11_80cx4"]
 [ext_resource type="Texture2D" uid="uid://dxxlrotnb6o0i" path="res://pages/8. interpretation.png" id="13_e8heu"]
+[ext_resource type="Script" uid="uid://bass0rlsxmscr" path="res://page_4.gd" id="13_f1jbl"]
+[ext_resource type="Texture2D" uid="uid://bi7llbwcgcki8" path="res://pages/11. valeurs.png" id="14_rvswv"]
+[ext_resource type="Texture2D" uid="uid://v55tffwoa4w0" path="res://pages/12. valeurs fond.png" id="15_boyg6"]
+[ext_resource type="Script" uid="uid://coyjnusdvrnds" path="res://page_5.gd" id="15_vaj68"]
+[ext_resource type="Texture2D" uid="uid://ksyw1grs02fm" path="res://images/backarrow.png" id="16_e8heu"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_80nbo")
@@ -31,30 +38,7 @@ visible = false
 position = Vector2(937, 404)
 scale = Vector2(12.5031, 12.5031)
 texture = ExtResource("3_vef74")
-
-[node name="hint 1" type="Label" parent="page1"]
-offset_left = -43.3493
-offset_top = -14.2365
-offset_right = 34.6507
-offset_bottom = -0.236485
-scale = Vector2(0.5, 0.5)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 0
-theme_override_fonts/font = ExtResource("4_hve3p")
-theme_override_font_sizes/font_size = 12
-text = "l'algèbre"
-
-[node name="hint 1_1" type="Label" parent="page1"]
-offset_left = -43.1893
-offset_top = 17.8356
-offset_right = 34.8107
-offset_bottom = 31.8356
-scale = Vector2(0.5, 0.5)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 0
-theme_override_fonts/font = ExtResource("4_hve3p")
-theme_override_font_sizes/font_size = 12
-text = "PowerPoint"
+script = ExtResource("4_e36ub")
 
 [node name="generic 1" type="Label" parent="page1"]
 offset_left = 9.27774
@@ -106,11 +90,136 @@ theme_override_font_sizes/font_size = 17
 text = "Structure du jugement
 professionnel:"
 
+[node name="hint 5" type="Label" parent="page1"]
+offset_left = -44.309
+offset_top = -11.8371
+offset_right = 166.691
+offset_bottom = 153.163
+scale = Vector2(0.2, 0.2)
+theme = ExtResource("5_hve3p")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_hve3p")
+theme_override_font_sizes/font_size = 20
+text = "L'algèbre
+
+
+
+
+
+
+Lecture Powerpoint"
+
+[node name="Label1_1" type="Label" parent="page1"]
+visible = false
+offset_left = -34.1516
+offset_top = -28.473
+offset_right = 364.848
+offset_bottom = 55.527
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je commence par « quoi évaluer ? » et je termine par « comment communiquer ? ». 
+"
+autowrap_mode = 2
+
+[node name="Label1_2" type="Label" parent="page1"]
+visible = false
+offset_left = -3.0
+offset_right = 287.0
+offset_bottom = 223.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+autowrap_mode = 2
+
+[node name="Label1_3" type="Label" parent="page1"]
+visible = false
+offset_left = -1.11972
+offset_top = -4.8788
+offset_right = 397.88
+offset_bottom = 29.1212
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "On me suit pour éviter de juger « au feeling »."
+autowrap_mode = 2
+
+[node name="Label1_4" type="Label" parent="page1"]
+visible = false
+offset_left = 5.75857
+offset_top = 19.9951
+offset_right = 404.759
+offset_bottom = 103.995
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Mon but est de rendre le jugement professionnel rigoureux et structuré.
+"
+autowrap_mode = 2
+
+[node name="Label1_5" type="Label" parent="page1"]
+visible = false
+offset_left = -64.2241
+offset_top = 22.3145
+offset_right = 177.776
+offset_bottom = 106.314
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je suis composée de cinq étapes, de la planification à la communication."
+autowrap_mode = 2
+
+[node name="hint1_1" type="Button" parent="page1"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -43.7492
+offset_top = -14.1565
+offset_right = -19.7492
+offset_bottom = -6.1565
+
+[node name="hint1_2" type="Button" parent="page1"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -43.5892
+offset_top = 16.236
+offset_right = 0.410778
+offset_bottom = 24.236
+
+[node name="hint1_3" type="Button" parent="page1"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 7.0
+offset_top = -9.44014
+offset_right = 63.0
+offset_bottom = -1.44014
+
+[node name="hint1_4" type="Button" parent="page1"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 6.0
+offset_top = 13.0
+offset_right = 52.0
+offset_bottom = 29.0
+
+[node name="hint1_5" type="Button" parent="page1"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -51.6672
+offset_top = -14.7164
+offset_right = -43.6672
+offset_bottom = 27.2836
+
 [node name="page2" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(955, 412)
 scale = Vector2(12.2499, 12.2499)
 texture = ExtResource("6_hve3p")
+script = ExtResource("8_hb5m1")
 
 [node name="generic 1" type="Label" parent="page2"]
 offset_left = -44.49
@@ -155,11 +264,102 @@ theme_override_font_sizes/font_size = 21
 text = "pour critères 
 individus --> p.3"
 
+[node name="Label1_1" type="Label" parent="page2"]
+visible = false
+offset_left = -72.0004
+offset_top = -20.8164
+offset_right = 327.0
+offset_bottom = 63.1836
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je cherche à classer, trier ou sélectionner.
+"
+autowrap_mode = 2
+
+[node name="Label1_2" type="Label" parent="page2"]
+visible = false
+offset_left = 15.7552
+offset_top = -27.6736
+offset_right = 305.755
+offset_bottom = 195.326
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je compare les élèves entre eux, souvent avec une courbe normale ou une moyenne.
+"
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="Label1_3" type="Label" parent="page2"]
+visible = false
+offset_left = -74.1228
+offset_top = 20.0001
+offset_right = 178.877
+offset_bottom = 162.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je suis l’opposé d’une évaluation axée sur les critères ou les progrès individuels.
+"
+autowrap_mode = 2
+
+[node name="Label1_4" type="Label" parent="page2"]
+visible = false
+offset_left = -3.83675
+offset_top = 13.796
+offset_right = 395.163
+offset_bottom = 97.796
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je suis souvent associée à des examens standardisés.
+"
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="hint1_1" type="Button" parent="page2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -56.0
+offset_top = -16.0
+offset_right = -3.0
+offset_bottom = 16.0
+
+[node name="hint1_2" type="Button" parent="page2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 5.0
+offset_top = -16.0
+offset_right = 56.0
+offset_bottom = 11.0
+
+[node name="hint1_3" type="Button" parent="page2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -67.0
+offset_top = 23.0
+offset_right = -22.0
+offset_bottom = 45.0
+
+[node name="hint1_4" type="Button" parent="page2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -17.0
+offset_top = 18.0
+offset_right = 40.0
+offset_bottom = 31.0
+
 [node name="page3" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(979, 423)
 scale = Vector2(12.033, 12.033)
 texture = ExtResource("7_iotsf")
+script = ExtResource("10_x5p1p")
 
 [node name="generic 1" type="Label" parent="page3"]
 offset_left = -42.0
@@ -224,11 +424,99 @@ d'écrire votre
 processus !"
 horizontal_alignment = 1
 
+[node name="Label1_1" type="Label" parent="page3"]
+offset_left = -32.6601
+offset_top = -24.7651
+offset_right = 366.34
+offset_bottom = 59.2349
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je suis en lien avec le programme par compétence et les contextes authentiques."
+autowrap_mode = 2
+
+[node name="Label1_2" type="Label" parent="page3"]
+offset_left = -75.0
+offset_top = 7.0
+offset_right = 661.0
+offset_bottom = 91.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je vise à vérifier la mobilisation d’un ensemble de ressources dans une situation.
+
+"
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="Label1_3" type="Label" parent="page3"]
+offset_left = -54.0179
+offset_top = 25.43
+offset_right = 402.982
+offset_bottom = 167.43
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je m’intéresse autant au processus qu’au produit.
+
+"
+autowrap_mode = 2
+
+[node name="Label1_4" type="Label" parent="page3"]
+offset_left = 2.0
+offset_top = 33.0
+offset_right = 367.0
+offset_bottom = 117.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je ne cherche pas juste à savoir si tu sais, mais comment tu utilises ce que tu sais.
+"
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="hint1_1" type="Button" parent="page3"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -49.0
+offset_top = -13.0
+offset_right = 53.0
+offset_bottom = -1.0
+
+[node name="hint1_2" type="Button" parent="page3"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -47.0
+offset_top = 12.0
+offset_right = 54.0
+offset_bottom = 21.0
+
+[node name="hint1_3" type="Button" parent="page3"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -46.7878
+offset_top = 20.1113
+offset_right = 47.2122
+offset_bottom = 28.1113
+
+[node name="hint1_4" type="Button" parent="page3"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 27.5076
+offset_top = 27.5076
+offset_right = 53.5076
+offset_bottom = 40.5076
+
 [node name="page4" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(958, 428)
 scale = Vector2(11.9525, 11.9525)
 texture = ExtResource("9_215e1")
+script = ExtResource("13_f1jbl")
 
 [node name="generic 1" type="Label" parent="page4"]
 offset_left = 29.6173
@@ -269,11 +557,105 @@ l'usage EXCLUSIF du
 professeur."
 horizontal_alignment = 1
 
+[node name="Label1_1" type="Label" parent="page4"]
+visible = false
+offset_left = -43.6729
+offset_top = 23.3424
+offset_right = 233.327
+offset_bottom = 136.342
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je suis le modèle de réponse fourni à l’enseignant pour juger le travail des élèves.
+"
+autowrap_mode = 2
+
+[node name="Label1_2" type="Label" parent="page4"]
+visible = false
+offset_left = 19.5775
+offset_top = -11.713
+offset_right = 291.578
+offset_bottom = 159.287
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "J’indique souvent les bonnes réponses ou les étapes attendues.
+
+
+"
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="Label1_3" type="Label" parent="page4"]
+visible = false
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 401.0
+offset_bottom = 90.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je suis utile surtout pour les tâches simples, avec une seule solution possible.
+"
+autowrap_mode = 2
+
+[node name="Label1_4" type="Label" parent="page4"]
+visible = false
+offset_left = 2.0
+offset_top = 33.0
+offset_right = 367.0
+offset_bottom = 117.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je ne cherche pas juste à savoir si tu sais, mais comment tu utilises ce que tu sais.
+"
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="hint1_1" type="Button" parent="page4"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 58.0
+offset_bottom = 40.0
+
+[node name="hint1_2" type="Button" parent="page4"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 5.0
+offset_top = -21.0
+offset_right = 59.0
+offset_bottom = 2.0
+
+[node name="hint1_3" type="Button" parent="page4"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 3.0
+offset_top = 7.0
+offset_right = 56.0
+offset_bottom = 15.0
+
+[node name="hint1_4" type="Button" parent="page4"]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 27.5076
+offset_top = 27.5076
+offset_right = 53.5076
+offset_bottom = 40.5076
+
 [node name="page5" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(949, 440)
 scale = Vector2(11.6775, 11.6775)
 texture = ExtResource("10_7sc4i")
+script = ExtResource("15_vaj68")
 
 [node name="generic 1" type="Label" parent="page5"]
 offset_left = -39.8202
@@ -322,6 +704,95 @@ theme_override_fonts/font = ExtResource("4_hve3p")
 theme_override_font_sizes/font_size = 15
 text = "Nom: ________"
 
+[node name="Label1_1" type="Label" parent="page5"]
+offset_left = -35.2816
+offset_top = -4.96683
+offset_right = 494.718
+offset_bottom = 79.0332
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je cible une ressource précise ou une habileté unique.
+"
+autowrap_mode = 2
+
+[node name="Label1_2" type="Label" parent="page5"]
+offset_left = -6.50825
+offset_top = 5.22372
+offset_right = 413.492
+offset_bottom = 118.224
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je ne permets pas vraiment d’analyser des stratégies ou des raisonnements complexes.
+
+"
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="Label1_3" type="Label" parent="page5"]
+offset_left = -45.0
+offset_top = 29.0
+offset_right = 438.0
+offset_bottom = 171.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je suis souvent fermée, avec une seule bonne réponse.
+"
+autowrap_mode = 2
+
+[node name="Label1_4" type="Label" parent="page5"]
+visible = false
+offset_left = 2.0
+offset_top = 33.0
+offset_right = 367.0
+offset_bottom = 117.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Je ne cherche pas juste à savoir si tu sais, mais comment tu utilises ce que tu sais.
+"
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="hint1_1" type="Button" parent="page5"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -41.0191
+offset_top = -2.82595
+offset_right = 39.9809
+offset_bottom = 5.17405
+
+[node name="hint1_2" type="Button" parent="page5"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -38.7926
+offset_top = 5.9088
+offset_right = 23.2074
+offset_bottom = 13.9088
+
+[node name="hint1_3" type="Button" parent="page5"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -35.0
+offset_top = 17.0
+offset_right = 34.0
+offset_bottom = 44.0
+
+[node name="hint1_4" type="Button" parent="page5"]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 27.5076
+offset_top = 27.5076
+offset_right = 53.5076
+offset_bottom = 40.5076
+
 [node name="page6" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(967.012, 431.944)
@@ -364,6 +835,7 @@ scale = Vector2(1.08656, 1.08656)
 texture = ExtResource("2_e2o6t")
 
 [node name="page8" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(968, 429)
 scale = Vector2(11.9608, 11.9608)
 texture = ExtResource("13_e8heu")
@@ -427,11 +899,12 @@ offset_top = -4.93277
 offset_right = 154.79
 offset_bottom = 11.0672
 scale = Vector2(0.2, 0.2)
-theme_override_colors/font_color = Color(0.298039, 0.52549, 0.603922, 1)
+theme_override_colors/font_color = Color(0.909804, 0, 0.054902, 1)
 theme_override_fonts/font = ExtResource("4_hve3p")
 theme_override_font_sizes/font_size = 18
 text = "COMPÉTENCES
-    "
+    SONT À LA 
+PAGE 3"
 
 [node name="page9" type="Sprite2D" parent="."]
 visible = false
@@ -447,15 +920,81 @@ texture = ExtResource("2_e2o6t")
 
 [node name="page11" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(960, 549)
-scale = Vector2(1.08656, 1.08656)
-texture = ExtResource("2_e2o6t")
+position = Vector2(974.468, 430.362)
+scale = Vector2(11.8747, 11.8747)
+texture = ExtResource("14_rvswv")
+
+[node name="generic 3" type="Label" parent="page11"]
+offset_left = -45.851
+offset_top = 6.20126
+offset_right = 123.149
+offset_bottom = 98.2013
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0.298039, 0.52549, 0.603922, 1)
+theme_override_fonts/font = ExtResource("4_hve3p")
+theme_override_font_sizes/font_size = 18
+text = "Décisions à 
+prendre pour la 
+prochaine année 
+universitaire : 
+un bref aperçu"
+
+[node name="generic 4" type="Label" parent="page11"]
+offset_left = -3.40789
+offset_top = -16.7888
+offset_right = 293.592
+offset_bottom = 4.21122
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0.0588235, 0.0745098, 0.0901961, 1)
+theme_override_fonts/font = ExtResource("4_hve3p")
+theme_override_font_sizes/font_size = 23
+text = "CRITÈRES d'ÉVALUATION"
+
+[node name="generic 5" type="Label" parent="page11"]
+offset_left = 0.550112
+offset_top = 13.612
+offset_right = 297.55
+offset_bottom = 34.612
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0.0926085, 0.264422, 0.299827, 1)
+theme_override_fonts/font = ExtResource("4_hve3p")
+theme_override_font_sizes/font_size = 23
+text = "Adaptation de plan"
+
+[node name="generic 6" type="Label" parent="page11"]
+offset_left = -46.0
+offset_top = 25.0
+offset_right = 151.0
+offset_bottom = 102.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0.298039, 0.52549, 0.603922, 1)
+theme_override_fonts/font = ExtResource("4_hve3p")
+theme_override_font_sizes/font_size = 14
+text = "
+- Changement de méthode 
+d'enseignement
+- Changement de 
+méthodologie"
 
 [node name="page12" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(960, 549)
-scale = Vector2(1.08656, 1.08656)
-texture = ExtResource("2_e2o6t")
+position = Vector2(966.801, 426.388)
+scale = Vector2(11.8803, 11.8803)
+texture = ExtResource("15_boyg6")
+
+[node name="generic 3" type="Label" parent="page12"]
+offset_left = 8.93911
+offset_top = -26.2947
+offset_right = 230.939
+offset_bottom = 65.7053
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0.898039, 0, 0.0627451, 1)
+theme_override_fonts/font = ExtResource("4_hve3p")
+theme_override_font_sizes/font_size = 15
+text = "
+je me référes à ceci 
+pour les directives
+ d'évaluation"
 
 [node name="page13 (recon)" type="Sprite2D" parent="."]
 visible = false
@@ -487,11 +1026,11 @@ theme_override_font_sizes/font_size = 100
 wait_time = 3.0
 
 [node name="gameExit" type="TextureButton" parent="."]
-offset_left = 30.0
-offset_top = 28.0
-offset_right = 229.0
-offset_bottom = 162.0
-texture_normal = ExtResource("2_fc0e3")
+offset_left = 44.0
+offset_top = -5.0
+offset_right = 155.0
+offset_bottom = 119.0
+texture_normal = ExtResource("16_e8heu")
 stretch_mode = 0
 
 [node name="answerBox" type="LineEdit" parent="."]
@@ -501,7 +1040,7 @@ offset_right = 1891.0
 offset_bottom = 1084.0
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 70
-placeholder_text = "Quel concept est démontré ici ?"
+placeholder_text = "Quel concept suis-je ?"
 
 [node name="Highlighter" type="Sprite2D" parent="."]
 visible = false

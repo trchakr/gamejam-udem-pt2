@@ -3,3 +3,9 @@ res://main.tscn
 res://mainMenu.tscn
 res://game.gd
 res://generic_text.tres
+res://store.tscn
+res://page_1.gd
+res://page_2.gd
+res://page_3.gd
+res://page_4.gd
+res://page_5.gd

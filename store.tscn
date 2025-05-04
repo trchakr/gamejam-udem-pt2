@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmg06pbaji0ev"]
+[gd_scene load_steps=13 format=3 uid="uid://cmg06pbaji0ev"]
 
 [ext_resource type="Script" uid="uid://d0lj28b0rqtao" path="res://store.gd" id="1_c176v"]
 [ext_resource type="Texture2D" uid="uid://70khruaajksd" path="res://images/main_menu.png" id="2_s3f3m"]
-[ext_resource type="Texture2D" uid="uid://cdh7h1lq83dp2" path="res://images/exit.png" id="2_x7ts4"]
-[ext_resource type="Texture2D" uid="uid://ctv21d08gpw5a" path="res://images/start.png" id="3_x7ts4"]
+[ext_resource type="Texture2D" uid="uid://ceb1rbprlo0d3" path="res://scrollbar boxes/box_abcbanner.png" id="3_sxxsk"]
+[ext_resource type="Texture2D" uid="uid://bg5a8nikg1s87" path="res://scrollbar boxes/box_apple.png" id="5_a4gqu"]
+[ext_resource type="Texture2D" uid="uid://c8sd0ttdk4s2s" path="res://scrollbar boxes/box_bookcase.png" id="5_mxlhg"]
+[ext_resource type="Texture2D" uid="uid://b8vsl70a73eg2" path="res://scrollbar boxes/box_chair.png" id="6_fsgxa"]
+[ext_resource type="Texture2D" uid="uid://djc6ao6hobnq3" path="res://scrollbar boxes/box_hbpencil.png" id="7_nvomd"]
+[ext_resource type="Texture2D" uid="uid://ccba42e14wbn1" path="res://scrollbar boxes/box_math.png" id="8_0sk1s"]
+[ext_resource type="Texture2D" uid="uid://dvk0b3ik35pm0" path="res://scrollbar boxes/box_pencilholder.png" id="9_hayl1"]
+[ext_resource type="Texture2D" uid="uid://wr2ina2sv8dh" path="res://scrollbar boxes/box_plant.png" id="10_0sk1s"]
+[ext_resource type="Texture2D" uid="uid://dpy5uuovl1keh" path="res://scrollbar boxes/box_stapler.png" id="11_hayl1"]
+[ext_resource type="Texture2D" uid="uid://b33wfplo4mpyw" path="res://scrollbar boxes/box_window.png" id="12_q7j3g"]
 
 [node name="store" type="Node2D"]
 script = ExtResource("1_c176v")
@@ -14,95 +22,51 @@ scale = Vector2(11.9917, 11.9917)
 texture = ExtResource("2_s3f3m")
 
 [node name="storeBar" type="ScrollContainer" parent="."]
-offset_left = 39.0
-offset_top = 755.0
-offset_right = 1887.0
-offset_bottom = 1056.0
+offset_left = 229.0
+offset_top = 829.0
+offset_right = 644.0
+offset_bottom = 893.0
+scale = Vector2(3.5, 3.5)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="storeBar"]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="storeBar/HBoxContainer"]
+[node name="ABCbanner" type="TextureButton" parent="storeBar/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("2_x7ts4")
-texture_hover = ExtResource("3_x7ts4")
+texture_normal = ExtResource("3_sxxsk")
 
-[node name="TextureButton2" type="TextureButton" parent="storeBar/HBoxContainer"]
+[node name="apple" type="TextureButton" parent="storeBar/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("2_x7ts4")
-texture_hover = ExtResource("3_x7ts4")
+texture_normal = ExtResource("5_a4gqu")
 
-[node name="TextureButton3" type="TextureButton" parent="storeBar/HBoxContainer"]
+[node name="bookcase" type="TextureButton" parent="storeBar/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("2_x7ts4")
-texture_hover = ExtResource("3_x7ts4")
+texture_normal = ExtResource("5_mxlhg")
 
-[node name="TextureButton4" type="TextureButton" parent="storeBar/HBoxContainer"]
+[node name="chair" type="TextureButton" parent="storeBar/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("2_x7ts4")
-texture_hover = ExtResource("3_x7ts4")
+texture_normal = ExtResource("6_fsgxa")
 
-[node name="TextureButton5" type="TextureButton" parent="storeBar/HBoxContainer"]
+[node name="hbPencil" type="TextureButton" parent="storeBar/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("2_x7ts4")
-texture_hover = ExtResource("3_x7ts4")
+texture_normal = ExtResource("7_nvomd")
 
-[node name="TextureButton6" type="TextureButton" parent="storeBar/HBoxContainer"]
+[node name="math" type="TextureButton" parent="storeBar/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("2_x7ts4")
-texture_hover = ExtResource("3_x7ts4")
+texture_normal = ExtResource("8_0sk1s")
 
-[node name="TextureButton7" type="TextureButton" parent="storeBar/HBoxContainer"]
+[node name="pencilHolder" type="TextureButton" parent="storeBar/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("2_x7ts4")
-texture_hover = ExtResource("3_x7ts4")
+texture_normal = ExtResource("9_hayl1")
 
-[node name="TextureButton8" type="TextureButton" parent="storeBar/HBoxContainer"]
+[node name="plant" type="TextureButton" parent="storeBar/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("2_x7ts4")
-texture_hover = ExtResource("3_x7ts4")
+texture_normal = ExtResource("10_0sk1s")
 
-[node name="TextureButton9" type="TextureButton" parent="storeBar/HBoxContainer"]
+[node name="stapler" type="TextureButton" parent="storeBar/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("2_x7ts4")
-texture_hover = ExtResource("3_x7ts4")
+texture_normal = ExtResource("11_hayl1")
 
-[node name="TextureButton10" type="TextureButton" parent="storeBar/HBoxContainer"]
+[node name="window" type="TextureButton" parent="storeBar/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("2_x7ts4")
-texture_hover = ExtResource("3_x7ts4")
-
-[node name="TextureButton11" type="TextureButton" parent="storeBar/HBoxContainer"]
-layout_mode = 2
-texture_normal = ExtResource("2_x7ts4")
-texture_hover = ExtResource("3_x7ts4")
-
-[node name="TextureButton12" type="TextureButton" parent="storeBar/HBoxContainer"]
-layout_mode = 2
-texture_normal = ExtResource("2_x7ts4")
-texture_hover = ExtResource("3_x7ts4")
-
-[node name="TextureButton13" type="TextureButton" parent="storeBar/HBoxContainer"]
-layout_mode = 2
-texture_normal = ExtResource("2_x7ts4")
-texture_hover = ExtResource("3_x7ts4")
-
-[node name="TextureButton14" type="TextureButton" parent="storeBar/HBoxContainer"]
-layout_mode = 2
-texture_normal = ExtResource("2_x7ts4")
-texture_hover = ExtResource("3_x7ts4")
-
-[node name="TextureButton15" type="TextureButton" parent="storeBar/HBoxContainer"]
-layout_mode = 2
-texture_normal = ExtResource("2_x7ts4")
-texture_hover = ExtResource("3_x7ts4")
-
-[node name="TextureButton16" type="TextureButton" parent="storeBar/HBoxContainer"]
-layout_mode = 2
-texture_normal = ExtResource("2_x7ts4")
-texture_hover = ExtResource("3_x7ts4")
-
-[node name="TextureButton17" type="TextureButton" parent="storeBar/HBoxContainer"]
-layout_mode = 2
-texture_normal = ExtResource("2_x7ts4")
-texture_hover = ExtResource("3_x7ts4")
+texture_normal = ExtResource("12_q7j3g")
