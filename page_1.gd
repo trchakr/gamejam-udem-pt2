@@ -1,7 +1,6 @@
 extends Sprite2D
 
 func _ready():
-	Input.set_custom_mouse_cursor(null)
 	show()
 	
 	add_child($hint1_1)
