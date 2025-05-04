@@ -7,7 +7,8 @@ var arrow = load("res://images/highlighter.png")
 
 
 func _ready():
-	print("ready")
+	$background.show()
+	_page_show(Global.document)
 	add_child($gameExit)
 	$gameExit.pressed.connect(_exitGame)
 	Input.set_custom_mouse_cursor(arrow)
@@ -21,12 +22,12 @@ func _exitGame():
 func _page_show(x):
 	match Global.document:
 		1:
-			$page1.show()
-			if (x + 2) == 1: # CONDITION
+			$page1.show() # (demarche eval)
+			if (x + 2) == 1:
 				x += 1
 				_page_show(x)
 		2:
-			$page2.show()
+			$page2.show() # (eval_norm)
 			
 func _on_text_submitted(new_text: String) -> void:
 	match Global.document:
@@ -66,7 +67,7 @@ func _correct():
 func _incorrect():
 	print(score, "incorrect")
 	score -= 1
-	$reward.text = ("Incorrect!")
+	$reward.text = ("Incorrect! -100")
 	$reward.show()
 	$rewardTimer.start()
 	
